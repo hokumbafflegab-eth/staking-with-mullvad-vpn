@@ -1,0 +1,10 @@
+# this systemd service calls the pubip-getter.sh script in /usr/local/bin
+
+[Unit]
+Description=Public IP Address Monitor
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/pubip-getter.sh

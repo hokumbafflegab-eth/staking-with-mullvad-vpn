@@ -1,0 +1,14 @@
+# this systemd timer calls pubip-getter.service
+# 10 seconds after boot
+# every 60 seconds after activation
+
+[Unit]
+Description=Timer for pubip-getter.service
+
+[Timer]
+OnUnitActiveSec=60s
+OnBootSec=10s
+Unit=pubip-getter.service
+
+[Install]
+WantedBy=multi-user.target

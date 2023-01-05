@@ -1,0 +1,4 @@
+# this target file is used to trigger restarts of other services (those that contain PartOf=pubip-changed.target)
+
+[Unit]
+Description=Public IP Address Changed
